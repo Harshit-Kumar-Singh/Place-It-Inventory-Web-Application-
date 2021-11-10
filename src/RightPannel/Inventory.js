@@ -93,8 +93,10 @@ const Inventory = () => {
         <div className="promptBox">
           <p></p>
           <kbd>{expression[0]}</kbd>
+          <br />
           <input type="number" id = "answer" />
-          <button onClick={timeTo}>Yes</button>
+         
+          <button className="add-btn" onClick={timeTo}>Yes</button>
         </div>
       </div>
       <div className="inventory-page">
@@ -113,13 +115,34 @@ const Inventory = () => {
          
         </div>
         <div className = "names">
-          <p>Product Name</p>
-          <p>Item Number</p>
-          <p>Manufacturer</p>
-          <p>Category</p>
-          <p>Price</p>
-          <p>Quantity</p>
-          <p></p>
+          <section  className="sub">
+          <p  className="singleName">Product Name</p>
+          </section>
+          
+          <section className="sub">
+          <p  className="singleName">Item Number</p>
+          </section>
+         
+          <section className="sub">
+          <p  className="singleName">Manufacturer</p>
+          </section>
+         
+          <section className="sub">
+          <p  className="singleName">Category</p>
+          </section>
+          
+          <section className="sub">
+          <p  className="singleName">Price</p>
+          </section>
+         
+          <section className="sub">
+          <p className="singleName">Quantity</p>
+          </section>
+         
+          <section className="sub">
+              <RiDeleteBin2Line  className="fakeIcon"></RiDeleteBin2Line>
+          </section>
+          
         </div>
         <div className = "addingForm" id = "onAdding">
         <form
@@ -137,6 +160,7 @@ const Inventory = () => {
             placeholder="Product Name"
             name="productName"
             id="productName"
+            required
           />
           <label htmlFor="itemNumber"></label>
           <br />
@@ -148,6 +172,7 @@ const Inventory = () => {
             placeholder="Item Number"
             name="itemNumber"
             id="itemNumber"
+
           />
           <label htmlFor="manufacturer"></label>
           <br />
@@ -158,6 +183,8 @@ const Inventory = () => {
             placeholder="ManuFacturer"
             name="manufacturer"
             id="manufacturer"
+
+            required
           />
           <label htmlFor="category"></label>
           <br />
@@ -168,6 +195,7 @@ const Inventory = () => {
             placeholder="Category"
             name="category"
             id="category"
+            required
           />
           <label htmlFor="price"></label>
           <br />
@@ -178,6 +206,7 @@ const Inventory = () => {
             name="price"
             placeholder="Price"
             id="price"
+            required
           />
           <label htmlFor="quantity"></label>
           <br />
@@ -188,6 +217,7 @@ const Inventory = () => {
             name="quantity"
             placeholder="Quantity"
             id="quantity"
+            required
           />
           <button onClick = {remove} className="add-btn">Add Item</button>
         </form>
@@ -197,16 +227,33 @@ const Inventory = () => {
           { dataList.map((data, idx) => {
             return (
               <div className="singleItem">
-                <p className="w11p">{data.productName}</p>
-                <p className="w11p">{data.itemNumber}</p>
+                <section  className="sub"><p className="w11p">{data.productName}</p></section>
+                
+                <section  className="sub"> <p className="w11p">{data.itemNumber}</p></section>
+
+               
+                <section  className="sub">
                 <p className="w11p">{data.manufacturer}</p>
+                </section>
+                
+                <section className="sub">
                 <p className="w11p">{data.category}</p>
+                </section>
+               
+                <section className="sub">
                 <p className="w11p">{data.price}</p>
+                </section>
+                
+                <section className="sub">
                 <p className="w11p">{data.quantity}</p>
+                </section>
+                <section className="sub">
                 <RiDeleteBin2Line onClick={()=>{
                   deleteSingle(data.itemNumber);
                 }} className="deleteSingleItemIcon"></RiDeleteBin2Line>
                 
+                </section>
+               
               </div>
             );
           })}

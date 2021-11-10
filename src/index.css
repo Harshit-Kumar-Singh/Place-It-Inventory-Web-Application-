@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  border: solid 1px red;
+  /* border: solid 1px red; */
   margin: 0%;
   height: 100%;
   box-sizing: border-box;
@@ -151,7 +151,7 @@ body {
 }
 .form {
   /* border:solid 2px red; */
-  background-color: white;
+  background-color:#58a4b0 ;
   height: 400px;
   width: 400px;
   border-radius: 5px;
@@ -210,14 +210,7 @@ body {
   /* border:solid 2px black; */
   /* height: 20px; */
 }
-.singleItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(242, 248, 255);
-  /* margin: 7px 0px; */
-  border: solid 1px rgb(221, 230, 241);
-}
+
 .singleItem :nth-child(1) {
   font-weight: bold;
 }
@@ -226,7 +219,14 @@ body {
   text-transform: capitalize;
   
 }
-
+.singleName{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style:inherit;
+  font-size: 20px;
+  color: #747373;
+  /* border: solid 2px black; */
+  /* width: 14.28%; */
+}
 .billuSanda {
   display:block;
   visibility:hidden;
@@ -240,8 +240,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+kbd{
+  color:white;
+  background-color: black;
+}
 .promptBox {
-  background-color: white;
+  background-color: #20a39e;
   height: 200px;
   width: 300px;
   border-radius: 5px;
@@ -283,5 +287,45 @@ input{
   color: black;
   display: flex;
   justify-content: space-between;
-  border: solid 2px green;
+  /* border: solid 2px green; */
+}
+.w11p{
+  /* border:solid 2px black; */
+  height: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.sub{
+  /* border: solid 2px black; */
+  width: 14.28%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.singleItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(242, 248, 255);
+  /* margin: 7px 0px; */
+  border: solid 1px rgb(221, 230, 241);
+}
+.names{
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  /* border: solid 2px green; */
+}
+.fakeIcon{
+  height: 30px;
+  width: 30px;
+  color: white;
+  padding: 10px;
+}
+.add-btn{
+  border:none;
+  background-color: #004385;
+  color: white;
+  border-radius: 2px;
+  padding: 8px;
+  margin-top:20px;
 }

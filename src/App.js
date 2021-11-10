@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, Link , Redirect} from "react-router-dom";
 import { DiCodeigniter } from "react-icons/di";
 import { RiHome4Line } from "react-icons/ri";
+import {HiClipboardList} from 'react-icons/hi'
+import {AiOutlineNotification,AiTwotoneSave,AiOutlineReload} from "react-icons/ai";
 import { BsFillPersonFill, BsThreeDotsVertical } from "react-icons/bs";
-
-import { IoNotifications } from "react-icons/io5";
 import { FaHome } from "@react-icons/all-files/fa/FaHome";
 import Inventory from "./RightPannel/Inventory";
 import Notifications from "./RightPannel/Notifications";
@@ -46,17 +46,17 @@ export const LeftPannel = () => {
     <div className="leftpannel">
       <div className="logos">
         <div className="top-icon">
-          <DiCodeigniter className="icons"></DiCodeigniter>
+          <HiClipboardList className="icons"></HiClipboardList>
         </div>
         <div className="inner-logos">
           <div>
             <FaHome className="icons" />
-            <FaHome className="icons" />
-            <IoNotifications className="icons"></IoNotifications>
+            
+            <AiOutlineNotification className="icons"></AiOutlineNotification>
           </div>
           <div>
-            <RiHome4Line className="icons"></RiHome4Line>
-            <DiCodeigniter className="icons"></DiCodeigniter>
+            <AiTwotoneSave className="icons"></AiTwotoneSave>
+            <AiOutlineReload className="icons"></AiOutlineReload>
           </div>
         </div>
       </div>
